@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+        }
+
+        .loading-container {
+            text-align: center;
+            width: 100%;
+            max-width: 500px; /* Adjusted for wider container */
+        }
+
+        .progress-bar {
+            width: 100%;
+            max-width: 500px;
+            height: 40px; /* Increased height for larger bar */
+            background-color: #ffffff;
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden;
+            margin: 20px auto; /* Centering vertically within the container */
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #2196f3, #ffffff);
+            transition: width 0.1s ease-in-out;
+        }
+
+        .percentage {
+            font-size: 1.5em; /* Slightly larger font */
+            margin-top: 10px; /* Space above percentage text */
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+        </div>
+        <div class="percentage">0%</div>
+    </div>
+
+    <script>
+        const progressBarFill = document.querySelector('.progress-bar-fill');
+        const percentageText = document.querySelector('.percentage');
+
+        let progress = 0;
+
+        const interval = setInterval(() => {
+            progress += 1;
+            progressBarFill.style.width = `${progress}%`;
+            percentageText.textContent = `${progress}%`;
+
+            if (progress >= 100) {
+                clearInterval(interval);
+                percentageText.textContent = "Loaded!";
+                window.location.href = "file:///D:/love/JP3.html"; // Replace with your target URL
+            }
+        }, 50); // Adjust the interval duration to control the speed
+    </script>
+</body>
+</html>

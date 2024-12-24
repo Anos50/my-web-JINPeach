@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เป็นแฟนกันนะค้าบ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Prompt', sans-serif;
+            background: linear-gradient(to bottom, #d9f3ff, #ffffff);
+            color: #333;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #1e90ff;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        img {
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            background-color: #4fd1ff;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #33b5e5;
+            transform: scale(1.1);
+        }
+
+        .btn-no {
+            background-color: #ff7f7f;
+        }
+
+        .btn-no:hover {
+            background-color: #e74c3c;
+        }
+
+        /* เพิ่มตำแหน่งของรูปทางซ้ายและขวา */
+        .image-left {
+            position: absolute;
+            top: 40%;
+            left:5%;
+            width: 300px;
+            height: auto;
+            transform: rotate(-20deg);
+        }
+
+        .image-right {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 300px;
+            height: auto;
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>เป็นแฟนกันนะค๊าบน้องจิน</h1>
+        <p>พี่สัญญาจะดูแลจินตลอดไป รักนะค๊าบ 💙</p>
+
+        <!-- รูปทางซ้าย -->
+        <img src="Screenshot_20241224-004130_Gallery (1)_image_repair_1734976047610.jpg" alt="รูปทางซ้าย" class="image-left">
+        <!-- รูปทางขวา -->
+        <img src="Screenshot_20241224-004454_Gallery (1)_image_repair_1734976018541.jpg" alt="รูปทางขวา" class="image-right">
+
+        <img src="IMG_3723 (1).JPG" alt="หมีน่ารัก">
+        
+        <div>
+            <!-- ปุ่ม "เป็น" กลับไปหน้าแรก -->
+            <a href="JP.html" class="btn" onclick="alert('เย้! รักนะค้าบ ❤️')">เป็น</a>
+            <!-- ปุ่ม "ไม่เป็น" กลับไปหน้าแรก -->
+            <a href="JP2.html" class="btn btn-no" onclick="alert('ไม่เอาไม่ยอมจินต้องเป้น😤')">ไม่เป็น</a>
+        </div>
+    </div>
+</body>
+</html>
